@@ -159,7 +159,11 @@ p {
     background-color: #FF4343;
 }
 
-.btn--red:hover {
+/* .btn--red:hover {
     background-color: #d23d3d;
+
+} */
+.btn--red:hover {
+    background-color: #14cc24;
 
 }
