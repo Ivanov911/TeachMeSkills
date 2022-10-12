@@ -30,8 +30,9 @@ p {
 ============= */
 .container {
     width: 100%;
-    max-width: 1510px;
+    max-width: 1540px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 
@@ -162,4 +163,170 @@ p {
 .btn--red:hover {
     background-color: #d23d3d;
 
+}
+
+
+/* Features */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 72.217px 0px 133.57px;
+
+}
+
+.features_item {
+    width: 33.333333%;
+
+    text-align: center;
+    padding: 0 31px;
+    margin: 43.785px 0;
+}
+
+.features_icon {
+    margin-bottom: 29px;
+}
+
+.features_title {
+    margin-bottom: 20.43px;
+
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #2D3033;
+
+}
+
+.features_text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #6C7279;
+
+}
+
+/* Works */
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works_item {
+    width: 25%;
+    height: 340px;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+
+    position: relative;
+    overflow: hidden;
+}
+.works_item:hover .works_content {
+    opacity: 1;
+}
+
+.works_foto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.works_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(185, 12, 12, 0.8);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.work_title {
+    margin-bottom: 20.57px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF
+}
+
+.work_text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+/* Team */
+.team {
+    margin: 114px 0 160.86px;
+}
+.team_inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+}
+.team_item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.team_foto {
+    margin-bottom: 30px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.team_name {
+  margin-bottom: 5.29px;  
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: #2D3033;
+}
+.team_prof {
+    margin-bottom: 17.86px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    
+    color: #FF4343;
+}
+.team_text {
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: center;
+
+color: #6C7279;
+prefix: ;
 }
