@@ -49,6 +49,18 @@ p {
     z-index: 1000;
 }
 
+.header.fixed {
+    height: auto;
+    position: fixed;
+    background-image: url(../img/intro-bg.jpg);
+}
+
+.header.fixed .header__inner {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 0px;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -93,6 +105,7 @@ p {
     padding-top: 100px;
 
     background-image: url(../img/intro-bg.jpg);
+
     background-color: rgba(129, 144, 144, 0.315);
     background-repeat: no-repeat;
     background-position: center center;
@@ -402,14 +415,29 @@ p {
 
 
 /* Reviews */
+
+
+
+
+
 .reviews {
     overflow: hidden;
     background-color: #5C3249;
 }
 
+.reviews__slider {
+    height: 490px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
 .reviews_item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reviews_photo {
@@ -463,6 +491,46 @@ p {
     color: #FFFFFF;
 }
 
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 -0px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: 50%;
+    position: absolute;
+    list-style: none;
+
+}
+
+.slick-dots li {
+    margin: 0 12.5px;
+}
+
+
+.slick-dots button {
+    border: 1px solid #7E5D6F;
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+
+    padding: 0;
+    cursor: pointer;
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots .slick-active button {
+    background-color: #7E5D6F;
+}
+
 
 /* Download */
 .download {
@@ -498,7 +566,7 @@ p {
     color: #000000;
 }
 
-.btn--red {}
+
 
 
 /* Footer */
@@ -680,113 +748,228 @@ p {
     .team {
         margin: 78.22px 0 78.21px;
     }
-}
 
-@media (max-width: 780px) {
-
-    /* Nav */
-    .nav {
-        display: none;
+    .reviews_text {
+        font-size: 24px;
+        line-height: 32px;
     }
 
-    /* Burger */
-    .burger {
-        display: block;
+    .reviews_author {
+        font-size: 12px;
+        line-height: 14px;
     }
 
-    .intro {
-        height: auto;
-        padding-top: 130px;
-        padding-bottom: 30px;
+    .donwload_title {
+        font-size: 24px;
+        line-height: 28px;
     }
 
-    .features_item {
-        width: 50%;
-    }
-
-    .works_item {
-        width: 50%;
-    }
-
-    .features {
-
-        margin: 40px 0px 34.85px;
-
-    }
-
-    .team_item {
-        width: 100%;
-
-    }
-
-    .team_foto {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .team {
-        margin: 35px 0 41px;
-    }
-
-    .reviews_photo {
-        width: 100%;
-
-
-    }
-
-    .reviews_content {
-        width: 100%;
-        padding-left: 0;
-        padding-bottom: 95px;
-        text-align: center;
-    }
-
-    .reviews_img {
-        width: 100%;
-        margin: 15px 0;
-        overflow: hidden;
-        
-    }
-
-}
-
-
-@media (max-width: 320px) {
-    .intro__title {
-        font-size: 36px;
-        line-height: 42px
-    }
-
-    .intro {
-        height: auto;
-        padding-top: 150px;
-        padding-bottom: 40px;
-
-    }
-
-    .intro__subtitle {
+    .download_text {
         font-size: 14px;
         line-height: 16px;
     }
 
-    .btn--long {
-        min-width: 279.24px;
+    .footer_title {
+        font-size: 14px;
+        line-height: 16px;
     }
 
-    .features_item {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-        margin: 41.47px 0;
+    .footer_addres {
+        font-size: 14px;
+        line-height: 16px;
     }
 
-    .features_icon {
-        width: 75.56px;
+    .footer_title {
+        font-size: 14px;
+        line-height: 16px;
     }
 
-    .works_item {
+    .footer_text {
+        font-size: 14px;
+        line-height: 16px;
+    }
 
-        height: 160px;
+    .copyright_text {
+        font-size: 14px;
+        line-height: 16px;
 
+    }
+
+    @media (max-width: 900px) and (min-width: 780px) {
+        .reviews_img {
+
+
+            right: -100px;
+        }
+    }
+
+    @media (max-width: 780px) {
+
+        /* Nav */
+        .nav {
+
+            display: none;
+            text-align: left;
+
+            width: 100%;
+            flex-direction: column;
+
+            background-image: url(../img/intro-bg.jpg);
+            background-position: center center;
+            background-size: cover;
+            /* background-color: rgba(129, 144, 144, 0.315); */
+            position: absolute;
+            right: 0;
+            top: 100%;
+
+        }
+
+        .nav.show {
+            display: flex;
+            padding-block-end: 304px;
+        }
+
+        .nav__link {
+            padding: 25px 35px;
+            margin: 0;
+            font-size: 13px;
+            line-height: 15px;
+        }
+
+        /* Burger */
+        .burger {
+            display: block;
+        }
+
+        .intro {
+            height: auto;
+            padding-top: 130px;
+            padding-bottom: 30px;
+        }
+
+        .features_item {
+            width: 50%;
+        }
+
+        .works_item {
+            width: 50%;
+        }
+
+        .features {
+
+            margin: 40px 0px 34.85px;
+
+        }
+
+        .team_item {
+            width: 100%;
+
+        }
+
+        .team_foto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team {
+            margin: 35px 0 41px;
+        }
+
+        .reviews_photo {
+            width: 100%;
+            margin: 15px 0 20px;
+            overflow: hidden;
+
+
+        }
+
+        .reviews_content {
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .donwload_title {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        .download_text {
+            font-size: 13px;
+            line-height: 15px;
+        }
+
+        .download {
+            margin: 45px 0;
+        }
+
+
+        .footer_inner {
+            padding: 33.14px 0;
+        }
+
+        .footer_block {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 34px;
+        }
+
+        .footer_block:last-child {
+            margin-bottom: 0;
+        }
+
+
+    }
+
+    @media (max-width: 500px) {
+        .reviews_img {
+
+
+            right: -100px;
+        }
+    }
+
+
+
+    @media (max-width: 320px) {
+        .intro__title {
+            font-size: 36px;
+            line-height: 42px
+        }
+
+        .intro {
+            height: auto;
+            padding-top: 150px;
+            padding-bottom: 40px;
+
+        }
+
+        .intro__subtitle {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .btn--long {
+            min-width: 279.24px;
+        }
+
+        .features_item {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            margin: 41.47px 0;
+        }
+
+        .features_icon {
+            width: 75.56px;
+        }
+
+        .works_item {
+
+            height: 160px;
+
+        }
     }
 }
