@@ -47,15 +47,15 @@ $(function () {
 
 
     // navToggle
-
-
     navToggle.on("click", function (event) {
         event.preventDefault();
         nav.toggleClass("show");
-
-
     });
-
+    $(function() {
+        $('#navToggle').click(function(){
+            $(this).toggleClass('open');
+        });
+    });
 
     // Reviews https://kenwheeler.github.io/slick/
 

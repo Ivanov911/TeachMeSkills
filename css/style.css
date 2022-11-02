@@ -5,7 +5,6 @@ body {
     color: #6C7279;
     -webkit-font-smoothing: antialiased;
     background-color: #ffffff;
-
 }
 
 *,
@@ -31,9 +30,9 @@ p {
 ============= */
 .container {
     width: 100%;
-    max-width: 1540px;
+    max-width: 1511px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 5px;
 }
 
 
@@ -56,18 +55,31 @@ p {
 }
 
 .header.fixed .header__inner {
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding-bottom: 21px;
+    padding-top: 17px;
     border-bottom: 0px;
+}
+
+.header.fixed .header__inner .nav__link:after {
+    padding-bottom: 5px;
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
-    padding: 35px 0;
-
+    padding: 35px 0 0 0;
     border-bottom: 1px solid #BABBC5;
 
+}
+
+.header__logo img {
+    height: 25.5px;
+    width: auto;
+}
+
+
+.container .header__inner {
+    margin: 0px 170px;
 }
 
 /* Nav
@@ -77,6 +89,7 @@ p {
     font-size: 13px;
     text-transform: uppercase;
     display: flex;
+    padding-right: 20px;
 }
 
 .nav__link {
@@ -84,7 +97,29 @@ p {
     color: #FFFFFF;
     text-decoration: none;
     opacity: 0.75;
-    transition: opacity 0.1s linear;
+    transition: color 0.5s linear;
+    display: inline-block;
+    line-height: 18px;
+}
+
+.nav__link:after {
+    display: block;
+    content: "";
+    height: 3px;
+    border-bottom: 3px solid #E71414;
+    padding-bottom: 43px;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+
+}
+
+.nav__link:hover:after,
+.nav__link:focus:after {
+    width: 100%;
+}
+
+.nav__link:hover {
+    color: #E71414;
 }
 
 .nav__link:first-child {
@@ -128,10 +163,7 @@ p {
     font-weight: 900;
     font-size: 64px;
     line-height: 75px;
-
-
     text-transform: uppercase;
-
     color: #FFFFFF;
 }
 
@@ -142,8 +174,6 @@ p {
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-
-
 
     color: #FFFFFF;
 }
@@ -179,7 +209,6 @@ p {
 
 .btn--red:hover {
     background-color: #d23d3d;
-
 }
 
 .btn--long {
@@ -192,7 +221,6 @@ p {
     display: flex;
     flex-wrap: wrap;
     margin: 116px 0px 116px;
-
 }
 
 .features_item {
@@ -216,7 +244,6 @@ p {
     line-height: 28px;
     text-transform: uppercase;
     color: #2D3033;
-
 }
 
 .features_text {
@@ -225,7 +252,6 @@ p {
     font-weight: 400;
     font-size: 18px;
     color: #6C7279;
-
 }
 
 /* Works */
@@ -240,7 +266,6 @@ p {
     height: 340px;
     border-bottom: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
-
     position: relative;
     overflow: hidden;
 }
@@ -303,7 +328,6 @@ p {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-
 }
 
 .team_item {
@@ -329,7 +353,6 @@ p {
     display: flex;
     align-items: center;
     text-transform: capitalize;
-
     color: #2D3033;
 }
 
@@ -344,7 +367,6 @@ p {
     display: flex;
     align-items: center;
     text-transform: uppercase;
-
     color: #FF4343;
 }
 
@@ -357,9 +379,7 @@ p {
     line-height: 21px;
     display: flex;
     align-items: center;
-
     color: #6C7279;
-
 }
 
 /*Social */
@@ -416,13 +436,9 @@ p {
 
 /* Reviews */
 
-
-
-
-
 .reviews {
     overflow: hidden;
-    background-color: #5C3249;
+    /* background-color: #5C3249; */
 }
 
 .reviews__slider {
@@ -460,7 +476,6 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .reviews_text {
@@ -473,9 +488,7 @@ p {
     display: flex;
     align-items: center;
     text-transform: capitalize;
-
     color: #FFFFFF;
-
 }
 
 .reviews_author {
@@ -487,8 +500,11 @@ p {
     display: flex;
     align-items: center;
     text-transform: uppercase;
-
     color: #FFFFFF;
+}
+
+.slick-list {
+    background-color: #5C3249;
 }
 
 .slick-dots {
@@ -499,16 +515,13 @@ p {
     bottom: 0;
     right: 0;
     z-index: 2;
-    width: 50%;
-    position: absolute;
     list-style: none;
-
+    padding: 20px;
 }
 
 .slick-dots li {
     margin: 0 12.5px;
 }
-
 
 .slick-dots button {
     border: 1px solid #7E5D6F;
@@ -558,24 +571,17 @@ p {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-
     align-items: center;
-
     text-transform: uppercase;
-
     color: #000000;
 }
 
 
-
-
 /* Footer */
-
 
 .footer {
 
     background-color: #353C65;
-
 }
 
 .footer_inner {
@@ -600,7 +606,6 @@ p {
     line-height: 21px;
     text-transform: uppercase;
     color: #FFFFFF;
-
 }
 
 .footer_addres {
@@ -611,10 +616,7 @@ p {
     font-size: 18px;
     line-height: 21px;
     text-transform: capitalize;
-
     color: #FFFFFF;
-
-
 }
 
 .footer_text {
@@ -624,11 +626,8 @@ p {
     font-size: 18px;
     line-height: 21px;
     text-transform: capitalize;
-
     color: #FFFFFF;
 }
-
-
 
 /* Copyright */
 
@@ -646,7 +645,6 @@ p {
     text-transform: capitalize;
     text-align: center;
     color: #808080;
-
 }
 
 .copyright_text span {
@@ -654,322 +652,368 @@ p {
 }
 
 /* Burger */
+
+
 .burger {
+    width: 60px;
+    transition-duration: 1s;
+    cursor: pointer;
     display: none;
     background: none;
     border: 0;
-    cursor: pointer;
-    padding: 8px 2px;
+    padding: 8px 40px;
 
 }
 
-.burger_item {
+.burger span {
     display: block;
-    width: 24px;
-    height: 3px;
+
     background-color: #FFFFFF;
     font-size: 0;
     color: transparent;
     position: relative;
+    height: 3px;
+    width: 24px;
 
-}
-
-.burger_item:before,
-.burger_item:after {
-    content: "";
-    width: 100%;
-    height: 100%;
     position: absolute;
+    transition-duration: .25s;
+    transition-delay: .25s;
+}
+
+.burger span:before {
     left: 0;
-    z-index: 1;
-    background-color: white;
-}
-
-.burger_item:before {
+    position: absolute;
     top: -8px;
+    height: 3px;
+    width: 24px;
+    background-color: #FFFFFF;
+    content: "";
+
+    transition-duration: .25s;
+    transition: transform .25s, top .25s .25s;
 }
 
-.burger_item::after {
-    bottom: -8px;
+.burger span:after {
+    left: 0;
+    position: absolute;
+    top: 8px;
+    height: 3px;
+    width: 24px;
+    background-color: #FFFFFF;
+    content: "";
+
+    transition-duration: .25s;
+    transition: transform .25s, top .25s .25s;
 }
+
+#navToggle.open span {
+    transition-duration: 0.1s;
+    transition-delay: .25s;
+    background: transparent;
+}
+
+#navToggle.open span:before {
+    transition: top .25s, transform .25s .25s;
+    top: 0px;
+    transform: rotateZ(-45deg);
+}
+
+#navToggle.open span:after {
+    transition: top 0.4s, transform .25s .25s;
+    top: 0px;
+    transform: rotateZ(45deg);
+}
+
 
 /* Media */
-@media (max-width: 1024px) {
 
-
-
-    /* Intro */
-    .intro__title {
-        font-size: 48px;
-        line-height: 56px;
+@media (max-width: 1224px) {
+    .container .header__inner {
+        margin: 0px 0px;
     }
 
-    .nav {
-        font-size: 12px;
-        line-height: 14px;
-    }
-
-    .intro__subtitle {
-        font-size: 18px;
-        line-height: 21px
-    }
-
-    .btn--long {
-        min-width: 313.15px;
-    }
-
-    /* Features */
-    .features_title {
-        font-size: 18px;
-        line-height: 21px;
-    }
-
-    .features_text {
-        font-size: 14px;
-        line-height: 16px;
-    }
-
-    .features_icon {
-        width: 85px;
-    }
-
-    .works_item {
-
-        height: 256.34px;
-
-    }
-
-    .features {
-
-        margin: 78px 0px 80.11px;
-
-    }
-
-    .team {
-        margin: 78.22px 0 78.21px;
-    }
-
-    .reviews_text {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    .reviews_author {
-        font-size: 12px;
-        line-height: 14px;
-    }
-
-    .donwload_title {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .download_text {
-        font-size: 14px;
-        line-height: 16px;
-    }
-
-    .footer_title {
-        font-size: 14px;
-        line-height: 16px;
-    }
-
-    .footer_addres {
-        font-size: 14px;
-        line-height: 16px;
-    }
-
-    .footer_title {
-        font-size: 14px;
-        line-height: 16px;
-    }
-
-    .footer_text {
-        font-size: 14px;
-        line-height: 16px;
-    }
-
-    .copyright_text {
-        font-size: 14px;
-        line-height: 16px;
-
-    }
-
-    @media (max-width: 900px) and (min-width: 780px) {
-        .reviews_img {
 
 
-            right: -100px;
+    @media (max-width: 1024px) {
+
+        /* Intro */
+        .intro__title {
+            font-size: 48px;
+            line-height: 56px;
         }
-    }
 
-    @media (max-width: 780px) {
-
-        /* Nav */
         .nav {
-
-            display: none;
-            text-align: left;
-
-            width: 100%;
-            flex-direction: column;
-
-            background-image: url(../img/intro-bg.jpg);
-            background-position: center center;
-            background-size: cover;
-            /* background-color: rgba(129, 144, 144, 0.315); */
-            position: absolute;
-            right: 0;
-            top: 100%;
-
+            font-size: 12px;
+            line-height: 14px;
+            padding-right: 20px;
         }
 
-        .nav.show {
-            display: flex;
-            padding-block-end: 304px;
+        .intro__subtitle {
+            font-size: 18px;
+            line-height: 21px
         }
 
-        .nav__link {
-            padding: 25px 35px;
-            margin: 0;
-            font-size: 13px;
-            line-height: 15px;
+        .btn--long {
+            min-width: 313.15px;
         }
 
-        /* Burger */
-        .burger {
-            display: block;
-        }
-
-        .intro {
-            height: auto;
-            padding-top: 130px;
-            padding-bottom: 30px;
-        }
-
-        .features_item {
-            width: 50%;
-        }
-
-        .works_item {
-            width: 50%;
-        }
-
-        .features {
-
-            margin: 40px 0px 34.85px;
-
-        }
-
-        .team_item {
-            width: 100%;
-
-        }
-
-        .team_foto {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .team {
-            margin: 35px 0 41px;
-        }
-
-        .reviews_photo {
-            width: 100%;
-            margin: 15px 0 20px;
-            overflow: hidden;
-
-
-        }
-
-        .reviews_content {
-            width: 100%;
-            padding-left: 0;
-            padding-bottom: 40px;
-            text-align: center;
-        }
-
-        .donwload_title {
+        /* Features */
+        .features_title {
             font-size: 18px;
             line-height: 21px;
         }
 
-        .download_text {
-            font-size: 13px;
-            line-height: 15px;
-        }
-
-        .download {
-            margin: 45px 0;
-        }
-
-
-        .footer_inner {
-            padding: 33.14px 0;
-        }
-
-        .footer_block {
-            width: 100%;
-            padding-left: 0;
-            padding-right: 0;
-            margin-bottom: 34px;
-        }
-
-        .footer_block:last-child {
-            margin-bottom: 0;
-        }
-
-
-    }
-
-    @media (max-width: 500px) {
-        .reviews_img {
-
-
-            right: -100px;
-        }
-    }
-
-
-
-    @media (max-width: 320px) {
-        .intro__title {
-            font-size: 36px;
-            line-height: 42px
-        }
-
-        .intro {
-            height: auto;
-            padding-top: 150px;
-            padding-bottom: 40px;
-
-        }
-
-        .intro__subtitle {
+        .features_text {
             font-size: 14px;
             line-height: 16px;
         }
 
-        .btn--long {
-            min-width: 279.24px;
-        }
-
-        .features_item {
-            width: 100%;
-            padding-left: 0;
-            padding-right: 0;
-            margin: 41.47px 0;
-        }
-
         .features_icon {
-            width: 75.56px;
+            width: 85px;
         }
 
         .works_item {
+            height: 256.34px;
+        }
 
-            height: 160px;
+        .features {
+            margin: 78px 0px 80.11px;
+        }
 
+        .team {
+            margin: 78.22px 0 78.21px;
+        }
+
+        .reviews_text {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .reviews_author {
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        .donwload_title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        .download_text {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .footer_title {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .footer_addres {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .footer_title {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .footer_text {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .copyright_text {
+            font-size: 14px;
+            line-height: 16px;
+
+        }
+
+        .slick-dots button {
+            width: 9.49px;
+            height: 9.49px;
+
+        }
+
+        @media (max-width: 900px) and (min-width: 780px) {
+            .reviews_img {
+                right: -100px;
+            }
+        }
+
+        @media (max-width: 780px) {
+
+            /* Nav */
+            .nav {
+
+                display: none;
+                text-align: left;
+
+                width: 100%;
+                flex-direction: column;
+
+                background-image: url(../img/intro-bg.jpg);
+                background-position: center center;
+                background-size: cover;
+                /* background-color: rgba(129, 144, 144, 0.315); */
+                position: absolute;
+                right: 0;
+                top: 100%;
+            }
+
+            .nav.show {
+                display: flex;
+                padding-block-end: 115px;
+            }
+
+            .nav__link {
+                padding: 5px 35px;
+                margin: 0;
+                font-size: 13px;
+                line-height: 15px;
+            }
+
+            /* Burger */
+            .burger {
+                display: block;
+
+                padding: 8px 19px;
+            }
+
+            .intro {
+                height: auto;
+                padding-top: 130px;
+                padding-bottom: 30px;
+            }
+
+            .features_item {
+                width: 50%;
+            }
+
+            .works_item {
+                width: 50%;
+            }
+
+            .features {
+
+                margin: 40px 0px 34.85px;
+
+            }
+
+            .team_item {
+                width: 100%;
+
+            }
+
+            .team_foto {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .team {
+                margin: 35px 0 41px;
+            }
+
+            .reviews_photo {
+                width: 100%;
+                margin: 15px 0 20px;
+                overflow: hidden;
+            }
+
+            .reviews_content {
+                width: 100%;
+                padding-left: 0;
+                padding-bottom: 40px;
+                text-align: center;
+            }
+
+            .donwload_title {
+                font-size: 18px;
+                line-height: 21px;
+            }
+
+            .download_text {
+                font-size: 13px;
+                line-height: 15px;
+            }
+
+            .download {
+                margin: 45px 0;
+            }
+
+
+            .footer_inner {
+                padding: 33.14px 0;
+            }
+
+            .footer_block {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 34px;
+            }
+
+            .footer_block:last-child {
+                margin-bottom: 0;
+            }
+
+            .header__inner {
+                border-bottom: 0px solid #BABBC5;
+                padding: 25px 0 0 0;
+            }
+
+
+        }
+
+        @media (max-width: 500px) {
+            .reviews_img {
+                right: -100px;
+            }
+
+            .header__logo img {
+                height: 14.35px;
+                width: auto;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .intro__title {
+                font-size: 36px;
+                line-height: 42px
+            }
+
+            .intro {
+                height: auto;
+                padding-top: 150px;
+                padding-bottom: 40px;
+            }
+
+            .intro__subtitle {
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            .btn--long {
+                min-width: 279.24px;
+            }
+
+            .features_item {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                margin: 41.47px 0;
+            }
+
+            .features_icon {
+                width: 75.56px;
+            }
+
+            .works_item {
+
+                height: 160px;
+
+            }
         }
     }
 }
